@@ -1,7 +1,10 @@
-# Dotfiles
+# My dots
+Always work in progress.
 
 ## Installation
-```./setup.sh```
+To install run:```sudo ./setup.sh```.
+
+Downloads python and some packages and sets up below files.
 
 ## Contains
 + Vim
