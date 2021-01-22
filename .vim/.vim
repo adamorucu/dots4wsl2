@@ -1,0 +1,1 @@
+/mnt/c/Users/adamd/Documents/Synced-Projects/dotfiles/.vim
