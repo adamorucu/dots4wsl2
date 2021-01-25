@@ -6,7 +6,10 @@ pip3 install numpy matplotlib pandas notebook
 apt-get install tmux
 
 # Symlinks
-ln -s -f $(pwd)/.jupyter ~/.jupyter
-ln -s -f $(pwd)/.vimrc ~/.vimrc
-ln -s -f $(pwd)/.vim ~/.vim
-ln -s -f $(pwd)/.tmux.conf ~/.tmux.conf
+ln -sf $(pwd)/.jupyter ~/.jupyter
+ln -sf $(pwd)/.vimrc ~/.vimrc
+ln -sf $(pwd)/.vim ~/.vim
+ln -sf $(pwd)/.tmux.conf ~/.tmux.conf
+
+# Intall packages
+vim -c PlugInstall
