@@ -2,10 +2,11 @@
 # Installations
 apt upgrade
 apt-get install python3-pip
-pip3 install numpy matplotlib pandas notebook
+pip3 --yes install numpy matplotlib pandas notebook
 apt-get install tmux
 
 # Symlinks
+echo "Stating Symlinking"
 ln -sf $(pwd)/.jupyter ~/.jupyter
 ln -sf $(pwd)/.vimrc ~/.vimrc
 ln -sf $(pwd)/.vim ~/.vim

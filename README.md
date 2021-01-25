@@ -1,8 +1,8 @@
 # My dots
-Always work in progress.
+Never complete.
 
 ## Installation
-> Downloads python and some packages and sets up below files.
+> Downloads python and some other packages and sets up below files.
 
 To install run: ```sudo ./setup.sh```.
 

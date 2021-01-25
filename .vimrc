@@ -107,3 +107,10 @@ let g:jedi#completions_command = "<C-Space>"
 let g:jedi#rename_command = "<leader>r"
 let g:jedi#completions_enabled = 1
 let g:jedi#popup_on_dot = 0
+
+
+" Auto commands
+augroup WrapLineInMDFile
+  autocmd!
+  autocmd FileType md setlocal wrap
+augroup END
