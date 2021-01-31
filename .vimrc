@@ -7,6 +7,8 @@ set expandtab
 set ai
 set number
 set relativenumber
+set ignorecase
+set smartcase
 set hlsearch
 set ruler
 set scrolloff=5
@@ -23,6 +25,7 @@ set incsearch
 set nowrap
 set signcolumn=no
 " set colorcolumn=80
+set nocompatible
 
 call plug#begin('~/.vim/plugged')
 " Color Schemes
@@ -38,12 +41,15 @@ Plug 'https://github.com/ervandew/supertab'
 Plug 'davidhalter/jedi-vim'
 Plug 'junegunn/fzf',  {'dir': '~/.fzf', 'do': './install --all'}
 Plug 'junegunn/fzf.vim'
+" Plug 'vim-pandoc/vim-pandoc'
+" Plug 'vim-pandoc/vim-pandoc-syntax'
 call plug#end()
 
 set guifont=Consolas
 
 " Themes
 filetype on
+filetype plugin on
 filetype plugin indent on
 
 colorscheme minimalist
@@ -114,3 +120,8 @@ augroup WrapLineInMDFile
   autocmd!
   autocmd FileType md setlocal wrap
 augroup END
+
+" augroup NoteTaking
+"   autocmd!
+"   autocmd BufWritePost *note*.md silent !buildNote %:p
+" augroup END
