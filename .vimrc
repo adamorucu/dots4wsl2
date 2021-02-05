@@ -97,7 +97,7 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 nnoremap <leader>u :UndotreeShow<CR>
-
+"
 " Search
 " Word
 nnoremap <leader>psw :CocSearch <C-R>=expand("<cword>")<CR><CR>
@@ -118,8 +118,10 @@ let g:jedi#popup_on_dot = 0
 " Auto commands
 augroup WrapLineInMDFile
   autocmd!
-  autocmd FileType md setlocal wrap
+  autocmd FileType md set wrap
 augroup END
+
+au BufRead,BufNewFile *.md setlocal wrap
 
 " augroup NoteTaking
 "   autocmd!
