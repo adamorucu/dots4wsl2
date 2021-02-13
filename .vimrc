@@ -68,13 +68,18 @@ let mapleader=" "
 "   let col = col('.') - 1
 "   return !col || getline('.')[col - 1] =~# '\s'
 " endfunction
+" if has('nvim')
+"     inoremap <silent><expr> <c-space> coc#refresh()
+" else
+"     inoremap <silent><expr> <c-@> coc#refresh()
+" endif
 " Coc
 " nnoremap <leader>ca :CocList diagnostics<CR>
 " nnoremap <leader>cc :CocList commands<CR>
 " nnoremap <leader>ce :CocList extensions<CR>
+" nmap <leader>cd <Plug>(coc-definition)
+" nmap <leader>cr <Plug>(coc-references)
 " Code navigation
-" nmap <silent>cd <Plug>(coc-definition)
-" nmap <silent>cr <Plug>(coc-references)
 " nmap <silent>[g <Plug>(ale_previous_wrap)
 " nmap <silent>]g <Plug>(ale_next_wrap)
 " Buffers
@@ -103,6 +108,8 @@ nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <leader>psw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 " File
 nnoremap <leader>ff :Files<CR>
+nnoremap <leader>fg :GFiles<CR>
+nnoremap <leader>fr :Rg<CR>
 let g:jedi#goto_command = "<leader>gc"
 let g:jedi#goto_assignment = ""
 let g:jedi#goto_stubs_command = ""
