@@ -2,7 +2,7 @@
 # Installations
 apt upgrade
 apt-get install python3-pip
-pip3 --yes install numpy matplotlib pandas notebook
+pip3 -y install numpy matplotlib pandas notebook
 apt-get install tmux
 
 # Symlinks

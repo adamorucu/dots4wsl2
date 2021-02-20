@@ -5,7 +5,8 @@ augroup AdamsAuto
   autocmd!
   autocmd bufwritepost init.vim source %    " Autoload .vimrc when changed
   autocmd BufWritePre *.py :%s/\s\+$//e
-	autocmd FileType markdown set wrap        " Wraps markdown files
+  autocmd FileType markdown set wrap        " Wraps markdown files
+  autocmd FileType vimwiki set wrap         " Wraps vimwiki files
 augroup END
 
 set encoding=utf-8
@@ -13,7 +14,7 @@ set encoding=utf-8
 set number            " Line numbering
 set relativenumber    " Relative line numbering
 set ruler 						" Show current line and character number
-set shortmess=atI     " Don't display message on start page
+set shortmess=I       " Don't display message on start page
 set guicursor=        " Block cursor
 
 set tabstop=2         " Tab = 2 spaces
@@ -38,7 +39,7 @@ set spell             " Check spelling of text
 filetype plugin on
 set nocompatible
 
-set pt=<leader>p      " Paste mode toggle
+set pt=<space>g      " Paste mode toggle
 set wildmenu          " Menu with completion
 set showtabline=2     " Always display tabline
 set noshowmode        " Don't show current mode (because there is the airline)
@@ -59,11 +60,12 @@ Plug 'vimwiki/vimwiki'                                    " Vim wiki
 Plug 'scrooloose/nerdtree'                                " File navigation
 Plug 'bling/vim-airline'                                  " Airline
 Plug 'junegunn/goyo.vim'                                  " Focused theme
+" Plug 'morhetz/gruvbox'                                  " Theme
 call plug#end()
 
 " ######## Themes ########
 syntax on             " Syntax highlighting
-set termguicolors     " Enable true colors support
+" set termguicolors     " Enable true colors support
 set background=dark
 colorscheme gruvbox
 
@@ -132,8 +134,13 @@ nmap <leader>gr <Plug>(coc-references)
 nmap <leader>gi <Plug>(coc-implementation)
 nmap <leader> gy <Plug>(coc-type-definition)
 
+" ### Auto complete
+
 " ######## Other Maps ########
 nmap <leader>pr :CocCommand python.execInTerminal<CR>   " Execute python code in terminal
+
+nnoremap <C-e> 3<C-e>
+nnoremap <C-y> 3<C-y>
 
 nnoremap <C-j> o<ESC>k																	" Create empty line below
 nnoremap <C-k> O<ESC>j																	" Create empty line above
@@ -183,4 +190,3 @@ function! s:show_documentation()
     execute '!' . &keywordprg . " " . expand('<cword>')
   endif
 endfunction
-
