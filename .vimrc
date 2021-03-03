@@ -97,6 +97,7 @@ set path+=**
 
 let NERDTreeIgnore=['\~$', '.o$', 'bower_components', 'node_modules', '__pycache__']
 let NERDTreeWinSize=30
+let NERDTreeMinimalUI=1
 
 nnoremap <leader>ff :Files<CR>              " Search in files
 nnoremap <leader>fg :GFiles<CR>             " Search in git project
@@ -126,7 +127,6 @@ nnoremap <leader>b :Buffers<CR>           " List buffers
 nnoremap <leader>m :bnext<CR>             " Next buffers
 nnoremap <leader>n :bprev<CR>             " Previous buffers
 nnoremap <leader>x :bd!<CR>               " Delete buffer
-
 
 " ### Code Navigation
 nmap <leader>gd <Plug>(coc-definition)
@@ -164,10 +164,11 @@ let g:vimwiki_list = [{'path': '/mnt/c/Users/adamd/Dropbox/vimnotes',
       \'auto_diary_index': 1}]
 
 " Vimwiki Journal
-nnoremap <leader>vj :VimwikiMakeDiaryNote<CR>:Goyo<CR>G:put=expand('%:t:r')<CR>:put=strftime('%H:%M %A')<CR>i> <esc>kkJi# <esc>Go<CR>
-nnoremap <leader>vg :VimwikiGenerateLinks<CR>
-nnoremap <leader>va :VimwikiDiaryIndex<CR>
-nnoremap <leader>vi :VimwikiIndex<CR>
+nnoremap <leader>wj :VimwikiMakeDiaryNote<CR>:Goyo<CR>G:put=expand('%:t:r')<CR>:put=strftime('%H:%M %A')<CR>i> <esc>kkJi# <esc>Go<CR>
+nnoremap <leader>wg :VimwikiGenerateLinks<CR>
+nnoremap <leader>wi :VimwikiDiaryIndex<CR>
+nnoremap <leader>wt :VimwikiIndex<CR>
+nnoremap <leader>ww :e /mnt/c/Users/adamd/Dropbox/vimnotes/momentary.md<CR>
 
 " Goyo
 let g:goyo_width=100
