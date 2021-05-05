@@ -1,10 +1,11 @@
 #!/bin/bash
 # Installations
 echo "Upgrade..."
-apt upgrade
+apt-get update
+apt-get upgrade
 echo "Installs..."
 apt-get install python3-pip
-pip3 -y install numpy matplotlib pandas notebook
+pip3 install numpy matplotlib pandas notebook
 apt-get install tmux
 
 # Symlinks
