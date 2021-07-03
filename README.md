@@ -1,4 +1,4 @@
-# My dots
+# Dot files for WSL2
 Never complete.
 
 ## Installation
